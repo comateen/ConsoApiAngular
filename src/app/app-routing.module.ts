@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/shared/login/login.component';
+import { LoginComponent } from './components/pages/login/login.component';
 import { FourOFourComponent } from './components/shared/four-o-four/four-o-four.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { AuthgardService } from './services/authgard.service';
-import { RegisterComponent } from './components/shared/register/register.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 const routes: Routes = [
   {path : 'signin', component : LoginComponent},

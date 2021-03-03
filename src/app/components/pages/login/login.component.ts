@@ -33,13 +33,13 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     const email = this.fg.get('email').value;
     const password = this.fg.get('password').value;
-
+    let isAuth;
     this._authService.signIn(email, password).subscribe(
       data => {
         this._router.navigate(['home']);
       },
       error => { 
-        this.errorMessage = error;
+        this.errorMessage = "Mot de passe ou Login erroné";
       }
     );
   }

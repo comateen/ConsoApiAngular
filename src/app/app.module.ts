@@ -8,13 +8,14 @@ import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbButtonM
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FourOFourComponent } from './components/shared/four-o-four/four-o-four.component';
-import { LoginComponent } from './components/shared/login/login.component';
+import { LoginComponent } from './components/pages/login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
-import { RegisterComponent } from './components/shared/register/register.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 import { AuthgardService } from './services/authgard.service';
+import { NavComponent } from './components/shared/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AuthgardService } from './services/authgard.service';
     FourOFourComponent,
     LoginComponent,
     HeaderComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavComponent
     
   ],
   imports: [

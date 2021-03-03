@@ -1,13 +1,13 @@
-<nav class="navbar-default">
+<!-- <nav class="navbar-default">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <li routerLinkActive="active" *ngIf="isAuth">
-                <a routerLink="gameslist">Liste des jeux</a>
+                <a routerLink="listFilm">Liste des Films</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li routerLinkActive="active" *ngIf="!isAuth">
-                <a routerLink="newUser">Créer un compte</a>
+                <a routerLink="register">Créer un compte</a>
             </li>
             <li routerLinkActive="active" *ngIf="!isAuth">
                 <a routerLink="signin">Se connecter</a>
@@ -17,18 +17,13 @@
             </li>
         </ul>
     </div>
-</nav>
-
-
-<!-- <nav class="navbar-default">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav">
-            <button routerLink="listFilm" routerLinkActive="active" *ngIf="isAuth">Liste des films</button>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <button routerLink="register" routerLinkActive="active" *ngIf="!isAuth">Créer un compte</button>
-            <button routerLink="signin" routerLinkActive="active" *ngIf="!isAuth">Se connecter</button>
-            <button (click)="onSignOut()" *ngIf="isAuth" style="cursor:pointer">Déconnexion</button>
-        </ul>
-    </div>
 </nav> -->
+
+<div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+        <button routerLink="register" nbButton routerLinkActive="active" *ngIf="!isAuth">Créer un compte</button>&nbsp;
+        <button routerLink="signin" nbButton routerLinkActive="active" *ngIf="!isAuth">Se connecter</button>&nbsp;
+        <button routerLink="listFilm" nbButton routerLinkActive="active" *ngIf="isAuth">Liste des films</button>&nbsp;
+        <button (click)="onSignOut()" nbButton *ngIf="isAuth" style="cursor:pointer">Déconnexion</button>&nbsp;
+    </ul>
+</div>
